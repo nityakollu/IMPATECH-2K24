@@ -1,0 +1,165 @@
+[
+    {
+        "hospital_name": "AIIMS",
+        "diseases": {
+            "Flu": {"cost": 500, "rating": 8, "severity": 7, "insurance_coverage": {"LIC": 80, "ICICI Prudential": 70}},
+            "COVID-19": {"cost": 1000, "rating": 7, "severity": 8, "insurance_coverage": {"SBI Life": 90, "HDFC Life": 85}},
+            "Appendicitis": {"cost": 3000, "rating": 9, "severity": 9, "insurance_coverage": {"Max Life Insurance": 95, "Tata AIA Life Insurance": 90}}
+        }
+    },
+    {
+        "hospital_name": "Apollo Hospitals",
+        "diseases": {
+            "Flu": {"cost": 550, "rating": 7, "severity": 6, "insurance_coverage": {"LIC": 75, "ICICI Prudential": 65}},
+            "COVID-19": {"cost": 1100, "rating": 6, "severity": 7, "insurance_coverage": {"SBI Life": 85, "HDFC Life": 80}},
+            "Appendicitis": {"cost": 3200, "rating": 8, "severity": 8, "insurance_coverage": {"Max Life Insurance": 92, "Tata AIA Life Insurance": 88}}
+        }
+    },
+    {
+        "hospital_name": "Fortis Healthcare",
+        "diseases": {
+            "Flu": {"cost": 480, "rating": 9, "severity": 8, "insurance_coverage": {"LIC": 88, "ICICI Prudential": 82}},
+            "COVID-19": {"cost": 950, "rating": 8, "severity": 7, "insurance_coverage": {"SBI Life": 87, "HDFC Life": 78}},
+            "Appendicitis": {"cost": 3100, "rating": 7, "severity": 8, "insurance_coverage": {"Max Life Insurance": 90, "Tata AIA Life Insurance": 85}}
+        }
+    },
+    {
+        "hospital_name": "Max Healthcare",
+        "diseases": {
+            "Flu": {"cost": 200, "rating": 9, "severity": 6, "insurance_coverage": {"LIC": 70, "ICICI Prudential": 60}},
+            "COVID-19": {"cost": 500, "rating": 7, "severity": 8, "insurance_coverage": {"SBI Life": 85, "HDFC Life": 75}},
+            "Appendicitis": {"cost": 1000, "rating": 9, "severity": 9, "insurance_coverage": {"Max Life Insurance": 92, "Tata AIA Life Insurance": 88}},
+            "Heart Attack": {"cost": 5000, "rating": 8, "severity": 10, "insurance_coverage": {"Reliance Nippon Life Insurance": 98, "Kotak Mahindra Life Insurance": 95}},
+            "Diabetes": {"cost": 300, "rating": 9, "severity": 7, "insurance_coverage": {"Bajaj Allianz Life Insurance": 75, "Aditya Birla Sun Life Insurance": 65}}
+        }
+    },
+    {
+        "hospital_name": "Columbia Asia Hospitals",
+        "diseases": {
+            "Flu": {"cost": 1075, "rating": 8, "severity": 6, "insurance_coverage": {"ICICI Prudential": 68, "HDFC Life": 58}},
+            "COVID-19": {"cost": 1000, "rating": 7, "severity": 8, "insurance_coverage": {"SBI Life": 88, "Bajaj Allianz Life Insurance": 78}},
+            "Appendicitis": {"cost": 3000, "rating": 9, "severity": 9, "insurance_coverage": {"Max Life Insurance": 92, "Tata AIA Life Insurance": 88}},
+            "Stroke": {"cost": 8000, "rating": 9, "severity": 9, "insurance_coverage": {"Reliance Nippon Life Insurance": 95, "Kotak Mahindra Life Insurance": 90}},
+            "Cancer": {"cost": 10000, "rating": 9, "severity": 10, "insurance_coverage": {"Bajaj Allianz Life Insurance": 97, "Aditya Birla Sun Life Insurance": 93}},
+            "Hepatitis": {"cost": 1500, "rating": 8, "severity": 7, "insurance_coverage": {"ICICI Prudential": 75, "HDFC Life": 70}}
+        }
+    },
+    {
+        "hospital_name": "Artemis Hospitals",
+        "diseases": {
+            "Flu": {"cost": 550, "rating": 7, "severity": 6, "insurance_coverage": {"LIC": 65, "ICICI Prudential": 60}},
+            "COVID-19": {"cost": 1100, "rating": 6, "severity": 7, "insurance_coverage": {"SBI Life": 70, "HDFC Life": 65}},
+            "Appendicitis": {"cost": 3200, "rating": 8, "severity": 8, "insurance_coverage": {"Max Life Insurance": 80, "Tata AIA Life Insurance": 75}},
+            "Asthma": {"cost": 600, "rating": 7, "severity": 5, "insurance_coverage": {"Bajaj Allianz Life Insurance": 60, "Aditya Birla Sun Life Insurance": 55}},
+            "High Blood Pressure": {"cost": 400, "rating": 8, "severity": 6, "insurance_coverage": {"ICICI Prudential": 68, "HDFC Life": 62}},
+            "Chronic Obstructive Pulmonary Disease": {"cost": 1200, "rating": 6, "severity": 6, "insurance_coverage": {"Bajaj Allianz Life Insurance": 62, "Aditya Birla Sun Life Insurance": 58}}
+        }
+    },
+    {
+        "hospital_name": "Narayana Health",
+        "diseases": {
+            "Flu": {"cost": 450, "rating": 8, "severity": 6, "insurance_coverage": {"LIC": 66, "ICICI Prudential": 61}},
+            "COVID-19": {"cost": 950, "rating": 7, "severity": 7, "insurance_coverage": {"SBI Life": 72, "HDFC Life": 68}},
+            "Appendicitis": {"cost": 2800, "rating": 9, "severity": 8, "insurance_coverage": {"Max Life Insurance": 82, "Tata AIA Life Insurance": 77}},
+            "Kidney Stones": {"cost": 2500, "rating": 8, "severity": 8, "insurance_coverage": {"Bajaj Allianz Life Insurance": 78, "Aditya Birla Sun Life Insurance": 73}},
+            "Arthritis": {"cost": 700, "rating": 7, "severity": 6, "insurance_coverage": {"ICICI Prudential": 64, "HDFC Life": 59}},
+            "Osteoporosis": {"cost": 850, "rating": 6, "severity": 7, "insurance_coverage": {"Bajaj Allianz Life Insurance": 69, "Aditya Birla Sun Life Insurance": 63}}
+        }
+    },
+    {
+        "hospital_name": "Medanta - The Medicity",
+        "diseases": {
+            "Flu": {"cost": 600, "rating": 7, "severity": 5, "insurance_coverage": {"LIC": 58, "ICICI Prudential": 53}},
+            "COVID-19": {"cost": 1050, "rating": 6, "severity": 6, "insurance_coverage": {"SBI Life": 60, "HDFC Life": 55}},
+            "Appendicitis": {"cost": 3500, "rating": 9, "severity": 8, "insurance_coverage": {"Max Life Insurance": 80, "Tata AIA Life Insurance": 75}},
+            "Migraine": {"cost": 300, "rating": 8, "severity": 4, "insurance_coverage": {"Bajaj Allianz Life Insurance": 50, "Aditya Birla Sun Life Insurance": 45}},
+            "Obesity": {"cost": 1000, "rating": 7, "severity": 6, "insurance_coverage": {"ICICI Prudential": 62, "HDFC Life": 57}},
+            "Rheumatoid Arthritis": {"cost": 900, "rating": 7, "severity": 6, "insurance_coverage": {"Bajaj Allianz Life Insurance": 64, "Aditya Birla Sun Life Insurance": 59}}
+        }
+    },
+    {
+        "hospital_name": "Tata Memorial Hospital",
+        "diseases": {
+            "Flu": {"cost": 650, "rating": 8, "severity": 7, "insurance_coverage": {"LIC": 60, "ICICI Prudential": 55}},
+            "COVID-19": {"cost": 1200, "rating": 7, "severity": 8, "insurance_coverage": {"SBI Life": 65, "HDFC Life": 60}},
+            "Appendicitis": {"cost": 3500, "rating": 9, "severity": 8, "insurance_coverage": {"Max Life Insurance": 75, "Tata AIA Life Insurance": 70}},
+            "Heart Attack": {"cost": 5500, "rating": 8, "severity": 9, "insurance_coverage": {"Reliance Nippon Life Insurance": 90, "Kotak Mahindra Life Insurance": 85}},
+            "Diabetes": {"cost": 400, "rating": 9, "severity": 7, "insurance_coverage": {"Bajaj Allianz Life Insurance": 72, "Aditya Birla Sun Life Insurance": 67}}
+        }
+    },
+    {
+        "hospital_name": "PGIMER",
+        "diseases": {
+            "Flu": {"cost": 500, "rating": 8, "severity": 6, "insurance_coverage": {"LIC": 70, "ICICI Prudential": 65}},
+            "COVID-19": {"cost": 1000, "rating": 7, "severity": 7, "insurance_coverage": {"SBI Life": 75, "HDFC Life": 70}},
+            "Appendicitis": {"cost": 3000, "rating": 9, "severity": 8, "insurance_coverage": {"Max Life Insurance": 85, "Tata AIA Life Insurance": 80}},
+            "Kidney Stones": {"cost": 2700, "rating": 8, "severity": 8, "insurance_coverage": {"Bajaj Allianz Life Insurance": 78, "Aditya Birla Sun Life Insurance": 73}},
+            "Arthritis": {"cost": 750, "rating": 7, "severity": 6, "insurance_coverage": {"ICICI Prudential": 64, "HDFC Life": 59}},
+            "Osteoporosis": {"cost": 900, "rating": 6, "severity": 7, "insurance_coverage": {"Bajaj Allianz Life Insurance": 69, "Aditya Birla Sun Life Insurance": 64}}
+        }
+    },
+    {
+        "hospital_name": "KIMS",
+        "diseases": {
+            "Flu": {"cost": 550, "rating": 7, "severity": 6, "insurance_coverage": {"LIC": 65, "ICICI Prudential": 60}},
+            "COVID-19": {"cost": 1000, "rating": 6, "severity": 7, "insurance_coverage": {"SBI Life": 70, "HDFC Life": 65}},
+            "Appendicitis": {"cost": 2800, "rating": 8, "severity": 8, "insurance_coverage": {"Max Life Insurance": 80, "Tata AIA Life Insurance": 75}},
+            "Asthma": {"cost": 500, "rating": 7, "severity": 5, "insurance_coverage": {"Bajaj Allianz Life Insurance": 60, "Aditya Birla Sun Life Insurance": 55}},
+            "High Blood Pressure": {"cost": 350, "rating": 8, "severity": 6, "insurance_coverage": {"ICICI Prudential": 68, "HDFC Life": 62}},
+            "Chronic Obstructive Pulmonary Disease": {"cost": 1100, "rating": 6, "severity": 6, "insurance_coverage": {"Bajaj Allianz Life Insurance": 62, "Aditya Birla Sun Life Insurance": 58}}
+        }
+    },
+    {
+        "hospital_name": "Yashoda",
+        "diseases": {
+            "Flu": {"cost": 480, "rating": 8, "severity": 6, "insurance_coverage": {"LIC": 66, "ICICI Prudential": 61}},
+            "COVID-19": {"cost": 900, "rating": 7, "severity": 7, "insurance_coverage": {"SBI Life": 72, "HDFC Life": 68}},
+            "Appendicitis": {"cost": 2700, "rating": 9, "severity": 8, "insurance_coverage": {"Max Life Insurance": 82, "Tata AIA Life Insurance": 77}},
+            "Kidney Stones": {"cost": 2400, "rating": 8, "severity": 8, "insurance_coverage": {"Bajaj Allianz Life Insurance": 78, "Aditya Birla Sun Life Insurance": 73}},
+            "Arthritis": {"cost": 650, "rating": 7, "severity": 6, "insurance_coverage": {"ICICI Prudential": 64, "HDFC Life": 59}},
+            "Osteoporosis": {"cost": 800, "rating": 6, "severity": 7, "insurance_coverage": {"Bajaj Allianz Life Insurance": 69, "Aditya Birla Sun Life Insurance": 63}}
+        }
+    },
+    {
+        "hospital_name": "AIG",
+        "diseases": {
+            "Flu": {"cost": 600, "rating": 7, "severity": 5, "insurance_coverage": {"LIC": 58, "ICICI Prudential": 53}},
+            "COVID-19": {"cost": 1100, "rating": 6, "severity": 6, "insurance_coverage": {"SBI Life": 60, "HDFC Life": 55}},
+            "Appendicitis": {"cost": 3200, "rating": 9, "severity": 8, "insurance_coverage": {"Max Life Insurance": 80, "Tata AIA Life Insurance": 75}},
+            "Migraine": {"cost": 280, "rating": 8, "severity": 4, "insurance_coverage": {"Bajaj Allianz Life Insurance": 50, "Aditya Birla Sun Life Insurance": 45}},
+            "Obesity": {"cost": 950, "rating": 7, "severity": 6, "insurance_coverage": {"ICICI Prudential": 62, "HDFC Life": 57}},
+            "Rheumatoid Arthritis": {"cost": 850, "rating": 7, "severity": 6, "insurance_coverage": {"Bajaj Allianz Life Insurance": 64, "Aditya Birla Sun Life Insurance": 59}}
+        }
+    },
+    {
+        "hospital_name": "AIIMS",
+        "diseases": {
+            "Flu": {"cost": 450, "rating": 9, "severity": 7, "insurance_coverage": {"LIC": 65, "ICICI Prudential": 60}},
+            "COVID-19": {"cost": 900, "rating": 8, "severity": 8, "insurance_coverage": {"SBI Life": 62, "HDFC Life": 58}},
+            "Appendicitis": {"cost": 2800, "rating": 9, "severity": 9, "insurance_coverage": {"Max Life Insurance": 68, "Tata AIA Life Insurance": 64}},
+            "Heart Surgery": {"cost": 15000, "rating": 10, "severity": 10, "insurance_coverage": {"Reliance Nippon Life Insurance": 69, "Kotak Mahindra Life Insurance": 67}},
+            "Cancer Treatment": {"cost": 20000, "rating": 10, "severity": 10, "insurance_coverage": {"Bajaj Allianz Life Insurance": 66, "Aditya Birla Sun Life Insurance": 63}}
+        }
+    },
+    {
+        "hospital_name": "Apollo Hospitals",
+        "diseases": {
+            "Flu": {"cost": 500, "rating": 8, "severity": 7, "insurance_coverage": {"LIC": 62, "ICICI Prudential": 58}},
+            "COVID-19": {"cost": 950, "rating": 7, "severity": 8, "insurance_coverage": {"SBI Life": 67, "HDFC Life": 63}},
+            "Appendicitis": {"cost": 3200, "rating": 8, "severity": 9, "insurance_coverage": {"Max Life Insurance": 69, "Tata AIA Life Insurance": 66}},
+            "Stroke": {"cost": 10000, "rating": 9, "severity": 10, "insurance_coverage": {"Reliance Nippon Life Insurance": 65, "Kotak Mahindra Life Insurance": 61}},
+            "Kidney Transplant": {"cost": 25000, "rating": 10, "severity": 10, "insurance_coverage": {"Bajaj Allianz Life Insurance": 60, "Aditya Birla Sun Life Insurance": 57}}
+        }
+    },
+    {
+        "hospital_name": "Fortis Healthcare",
+        "diseases": {
+            "Flu": {"cost": 480, "rating": 9, "severity": 7, "insurance_coverage": {"LIC": 61, "ICICI Prudential": 57}},
+            "COVID-19": {"cost": 900, "rating": 8, "severity": 8, "insurance_coverage": {"SBI Life": 68, "HDFC Life": 64}},
+            "Appendicitis": {"cost": 3100, "rating": 8, "severity": 9, "insurance_coverage": {"Max Life Insurance": 66, "Tata AIA Life Insurance": 62}},
+            "Liver Transplant": {"cost": 20000, "rating": 10, "severity": 10, "insurance_coverage": {"Reliance Nippon Life Insurance": 59, "Kotak Mahindra Life Insurance": 55}},
+            "Lung Cancer Treatment": {"cost": 28000, "rating": 10, "severity": 10, "insurance_coverage": {"Bajaj Allianz Life Insurance": 57, "Aditya Birla Sun Life Insurance": 54}}
+        }
+    }
+    
+]

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Find the Best Hospital for Your Disease</h1>
+    <form method="post">
+        <label for="disease">Enter a disease: </label>
+        <input type="text" name="disease" required>
+        <input type="submit" value="Search">
+    </form>
+
+    {% if hospitals %}
+    <h2>Results for {{ disease }}</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Hospital Name</th>
+                <th>Average Cost</th>
+                <th>Rating</th>
+                <!-- <th>Score</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for hospital, score in hospitals %}
+            <tr>
+                <td>{{ hospital['hospital_name'] }}</td>
+                <td>Rs.{{ hospital['diseases'][disease]['cost'] }}</td>
+                <td>{{ hospital['diseases'][disease]['rating'] }}</td>
+                <!-- <td>{{ score }}</td> -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+</body>
+</html>

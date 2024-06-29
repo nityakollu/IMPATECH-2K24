@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Healthcare Information</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+</head>
+
+<body>
+  <div class="box">
+    <div class="container">
+      <img src="{{ url_for('static', filename='KL.png') }}">
+      <h1>IMPACTECH-2K23</h1>
+    </div>
+    <div class="container2">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/text">Disease Estimates</a></li>
+        <li><a href="#">Health Insurance</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </div>
+
+    <h2>Healthcare Price Transparency</h2>
+    <p>Compare the estimated cost for outpatient healthcare services in and around Hyderabad.</p>
+    <div class="roadmap">
+      <button onclick="showStartHere()">Start Here</button>
+      <button onclick="showInsuranceCareer()">Insurance Cover</button>
+      <button onclick="showCostEstimates()">Cost Estimates</button>
+    </div>
+
+    <div class="step" id="start-here">
+      <h2>Start Here</h2>
+      <center>
+        <h3>Choose the Type of Procedure to Compare Costs.</h3>
+        <p style="color: #222222;
+        font:24px 'Source Sans Pro',Arial,sans-serif;
+        margin: 16px 0px 20px;">Compare the estimated cost of the healthcare procedure by medical or dental providers.
+        </p>
+        <button onclick="showInsuranceCareer()">+ Medical Procedures</button>
+        <button onclick="window.location.href='medp'">Medicine Prices</button>
+      </center>
+
+    </div>
+
+    <div class="step" id="insurance-cover" style="display: none;">
+      <h2>Insurance Cover</h2>
+      <center>
+        <h3>Select Your Insurance Provider</h3>
+        <p style="color: #222222;
+        font:20px 'Source Sans Pro',Arial,sans-serif; margin: 0 0 20;">Each insurance company negotiates different
+          discounts for services. Select your health insurance company to improve the accuracy of your estimates.</p>
+      </center>
+      <h4>Insurance Provider</h4>
+      <select id="hospitalSelect" name="hospital">
+        <option value="N/A">I DO NOT HAVE MEDICAL INSURANCE</option>
+        <option value="AIIMS">AIIMS</option>
+        <option value="Apollo Hospitals">Apollo Hospitals</option>
+        <option value="Fortis Healthcare">Fortis Healthcare</option>
+        <option value="Max Healthcare">Max Healthcare</option>
+        <option value="Columbia Asia Hospitals">Columbia Asia Hospitals</option>
+        <option value="Artemis Hospitals">Artemis Hospitals</option>
+        <option value="Narayana Health">Narayana Health</option>
+        <option value="Medanta - The Medicity">Medanta - The Medicity</option>
+        <option value="Tata Memorial Hospital">Tata Memorial Hospital</option>
+        <option value="PGIMER">PGIMER</option>
+      </select>
+      <button onclick="showStartHere()">Previous</button>
+      <button onclick="showCostEstimates()">Next</button>
+
+    </div>
+
+    <div class="step" id="cost-estimates" style="display: none;">
+      <h2>Cost Estimates</h2>
+      <p>Information about cost estimates goes here.</p>
+    </div>
+  </div>
+
+  <script>
+    function hideAllSteps() {
+      const steps = document.querySelectorAll('.step');
+      steps.forEach(step => step.style.display = 'none');
+    }
+
+    function showStartHere() {
+      hideAllSteps();
+      document.getElementById('start-here').style.display = 'block';
+      document.getElementById('insurance-cover').style.display = 'none';
+      document.getElementById('cost-estimates').style.display = 'none';
+    }
+
+    function showInsuranceCareer() {
+      hideAllSteps();
+      document.getElementById('insurance-cover').style.display = 'block';
+    }
+
+    function showCostEstimates() {
+      hideAllSteps();
+      document.getElementById('cost-estimates').style.display = 'block';
+    }
+
+    // Initially show the Start Here step
+    showStartHere();
+  </script>
+
+</body>
+
+</html>

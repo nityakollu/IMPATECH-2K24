@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hospital Search</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+</head>
+
+<body>
+    <div class="box">
+        <div class="container">
+            <img src="{{ url_for('static', filename='KL.png') }}">
+            <h1>IMPACTECH-2K23</h1>
+        </div>
+        <div class="container2">
+            <ul>
+                <li><a href="/text">Health Costs</a></li>
+                <li><a href="#">Quality of Care</a></li>
+                <li><a href="#">Health Insurance</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+        <center>
+            <h1>Find the Best Hospital for Your Disease</h1>
+            <form method="post">
+                <label for="disease">Enter a disease: </label>
+                <input type="text" name="disease" required>
+                <input type="submit" value="Search">
+            </form>
+
+            {% if hospitals %}
+            <h2>Results for {{ disease }}</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Hospital Name</th>
+                        <th>Average Cost</th>
+                        <th>Rating</th>
+                        <th>Severity</th>
+                        <th>Insurance Coverage in %</th>
+                        <!-- <th>Score</th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for hospital, score in hospitals %}
+                    <tr>
+                        <td>{{ hospital['hospital_name'] }}</td>
+                        <td>Rs.{{ hospital['diseases'][disease]['cost'] }}</td>
+                        <td>{{ hospital['diseases'][disease]['rating'] }}</td>
+                        <td>{{ hospital['diseases'][disease]['severity'] }}</td>
+                        <td>{{ hospital['diseases'][disease]['insurance_coverage']}}</td>
+
+                        <!-- <td>{{ score }}</td> -->
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% endif %}
+        </center>
+</body>
+
+</html>

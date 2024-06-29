@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Real-time Speech-to-Text Converter</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script>
+    function startRecording() {
+      var recognition = new webkitSpeechRecognition();
+      recognition.continuous = true;
+      recognition.interimResults = true;
+
+      recognition.onresult = function(event) {
+        var result = event.results[event.results.length - 1];
+        var transcript = result[0].transcript;
+        document.getElementById('text').textContent = transcript;
+      };
+
+      recognition.onend = function() {
+        document.getElementById('record-button').textContent = 'Start Recording';
+      };
+
+      recognition.start();
+    }
+  </script>
+</head>
+<body>
+  <h1>Real-time Speech-to-Text Converter</h1>
+
+  <button onclick="startRecording()" id="record-button"><i class="fas fa-microphone"></i></button>
+
+  <h2>Recognized Text:</h2>
+  <div id="text"></div>
+</body>
+</html>

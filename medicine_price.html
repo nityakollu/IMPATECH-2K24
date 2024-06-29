@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medicine Prices Comparison (INR)</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            display: none; /* Hide the table initially */
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="container">
+      <img src="{{ url_for('static', filename='KL.png') }}">
+      <h1>IMPACTECH-2K23</h1>
+    </div>
+    <div class="container2">
+      <ul>
+        <li><a href="/text">Health Costs</a></li>
+        <li><a href="#">Quality of Care</a></li>
+        <li><a href="#">Health Insurance</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </div>
+
+    <h1>Medicine Prices Comparison (INR)</h1>
+
+    <form method="post" onsubmit="searchMedicine(); return false;">
+        <label for="medicine">Enter a medicine: </label>
+        <input type="text" id="medicine" name="medicine" required>
+        <input type="submit" value="Search">
+    </form>
+
+    <table id="medicineTable">
+        <thead>
+            <tr>
+                <th>Medicine Name</th>
+                <th>Apollo Pharmacy</th>
+                <th>Medplus</th>
+                <th>PharmEasy</th>
+            </tr>
+        </thead>
+        <tbody id="medicineTableBody"></tbody>
+    </table>
+
+    <script>
+        // Embedded JSON data
+        const medicineData = {
+            "medicines": [
+                { "name": "Aspirin", "apollo": 50.00, "medplus": 48.00, "pharmeasy": 45.00 },
+                { "name": "Ibuprofen", "apollo": 70.00, "medplus": 65.00, "pharmeasy": 60.00 },
+                { "name": "Paracetamol", "apollo": 40.00, "medplus": 35.00, "pharmeasy": 38.00 },
+        { "name": "Amoxicillin", "apollo": 120.00, "medplus": 110.00, "pharmeasy": 105.00 },
+        { "name": "Loratadine", "apollo": 80.00, "medplus": 75.00, "pharmeasy": 70.00 },
+        { "name": "Omeprazole", "apollo": 150.00, "medplus": 145.00, "pharmeasy": 140.00 },
+        { "name": "Ciprofloxacin", "apollo": 180.00, "medplus": 175.00, "pharmeasy": 170.00 },
+        { "name": "Metformin", "apollo": 100.00, "medplus": 95.00, "pharmeasy": 90.00 },
+        { "name": "Atorvastatin", "apollo": 220.00, "medplus": 215.00, "pharmeasy": 210.00 },
+        { "name": "Levothyroxine", "apollo": 140.00, "medplus": 135.00, "pharmeasy": 130.00 },
+        { "name": "Escitalopram", "apollo": 200.00, "medplus": 195.00, "pharmeasy": 190.00 },
+        { "name": "Montelukast", "apollo": 160.00, "medplus": 155.00, "pharmeasy": 150.00 },
+        { "name": "Diazepam", "apollo": 240.00, "medplus": 235.00, "pharmeasy": 230.00 },
+        { "name": "Cetirizine", "apollo": 95.00, "medplus": 90.00, "pharmeasy": 85.00 },
+        { "name": "Sertraline", "apollo": 177.00, "medplus": 172.00, "pharmeasy": 167.00 },
+        { "name": "Prednisone", "apollo": 139.00, "medplus": 134.00, "pharmeasy": 129.00 },
+        { "name": "Amlodipine", "apollo": 204.00, "medplus": 199.00, "pharmeasy": 194.00 },
+        { "name": "Warfarin", "apollo": 117.00, "medplus": 112.00, "pharmeasy": 107.00 },
+        { "name": "Losartan", "apollo": 149.00, "medplus": 144.00, "pharmeasy": 139.00 },
+        { "name": "Hydrochlorothiazide", "apollo": 122.00, "medplus": 117.00, "pharmeasy": 112.00 },
+        { "name": "Gabapentin", "apollo": 229.00, "medplus": 224.00, "pharmeasy": 219.00 },
+        { "name": "Alprazolam", "apollo": 187.00, "medplus": 182.00, "pharmeasy": 177.00 },
+        { "name": "Methotrexate", "apollo": 254.00, "medplus": 249.00, "pharmeasy": 244.00 },
+        { "name": "Azithromycin", "apollo": 169.00, "medplus": 164.00, "pharmeasy": 159.00 },
+        { "name": "Fluoxetine", "apollo": 152.00, "medplus": 147.00, "pharmeasy": 142.00 },
+        { "name": "Carvedilol", "apollo": 194.00, "medplus": 189.00, "pharmeasy": 184.00 },
+        { "name": "Lisinopril", "apollo": 147.00, "medplus": 142.00, "pharmeasy": 137.00 },
+        { "name": "Furosemide", "apollo": 114.00, "medplus": 109.00, "pharmeasy": 104.00 },
+        { "name": "Metoprolol", "apollo": 164.00, "medplus": 159.00, "pharmeasy": 154.00 },
+        { "name": "Simvastatin", "apollo": 208.00, "medplus": 203.00, "pharmeasy": 198.00 }
+        // Add more medicines as needed
+            ]
+        };
+
+        function searchMedicine() {
+            const medicineName = document.getElementById('medicine').value.trim().toLowerCase();
+            const table = document.getElementById('medicineTable');
+            const tableBody = document.getElementById('medicineTableBody');
+            tableBody.innerHTML = ''; // Clear previous results
+
+            const medicine = medicineData.medicines.find(m => m.name.toLowerCase() === medicineName);
+
+            if (medicine) {
+                const row = document.createElement('tr');
+                const nameCell = document.createElement('td');
+                const apolloCell = document.createElement('td');
+                const medplusCell = document.createElement('td');
+                const pharmeasyCell = document.createElement('td');
+
+                nameCell.textContent = medicine.name;
+                apolloCell.textContent = `₹${medicine.apollo.toFixed(2)}`;
+                medplusCell.textContent = `₹${medicine.medplus.toFixed(2)}`;
+                pharmeasyCell.textContent = `₹${medicine.pharmeasy.toFixed(2)}`;
+
+                row.appendChild(nameCell);
+                row.appendChild(apolloCell);
+                row.appendChild(medplusCell);
+                row.appendChild(pharmeasyCell);
+                tableBody.appendChild(row);
+
+                // Display the table
+                table.style.display = 'table';
+            } else {
+                alert('Medicine not found!');
+            }
+        }
+    </script>
+</body>
+</html>

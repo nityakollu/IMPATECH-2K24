@@ -1,0 +1,165 @@
+[
+    {
+        "hospital_name": "AIIMS",
+        "diseases": {
+            "Ultrasound": {"cost": 500, "rating": 8, "severity": 7, "insurance_coverage": 90},
+            "Cataract Surgery": {"cost": 1000, "rating": 7, "severity": 8, "insurance_coverage": 85},
+            "Biopsy": {"cost": 3000, "rating": 9, "severity": 9, "insurance_coverage": 95}
+        }
+    },
+    {
+        "hospital_name": "Apollo Hospitals",
+        "diseases": {
+            "Ultrasound": {"cost": 550, "rating": 7, "severity": 6, "insurance_coverage":75},
+            "Cataract Surgery": {"cost": 1100, "rating": 6, "severity": 7, "insurance_coverage": 80},
+            "Biopsy": {"cost": 3200, "rating": 8, "severity": 8, "insurance_coverage":  92}
+        }
+    },
+    {
+        "hospital_name": "Fortis Healthcare",
+        "diseases": {
+            "Ultrasound": {"cost": 480, "rating": 9, "severity": 8, "insurance_coverage": 85},
+            "Cataract Surgery": {"cost": 950, "rating": 8, "severity": 7, "insurance_coverage": 78},
+            "Biopsy": {"cost": 3100, "rating": 7, "severity": 8, "insurance_coverage": 83}
+        }
+    },
+    {
+        "hospital_name": "Max Healthcare",
+        "diseases": {
+            "Ultrasound": {"cost": 200, "rating": 9, "severity": 6, "insurance_coverage": 85},
+            "Cataract Surgery": {"cost": 500, "rating": 7, "severity": 8, "insurance_coverage": 56},
+            "Biopsy": {"cost": 1000, "rating": 9, "severity": 9, "insurance_coverage": 52},
+            "Heart Attack": {"cost": 5000, "rating": 8, "severity": 10, "insurance_coverage":98},
+            "Diabetes": {"cost": 300, "rating": 9, "severity": 7, "insurance_coverage": 65}
+        }
+    },
+    {
+        "hospital_name": "Columbia Asia Hospitals",
+        "diseases": {
+            "Ultrasound": {"cost": 1075, "rating": 8, "severity": 6, "insurance_coverage": 58},
+            "Cataract Surgery": {"cost": 1000, "rating": 7, "severity": 8, "insurance_coverage": 78},
+            "Biopsy": {"cost": 3000, "rating": 9, "severity": 9, "insurance_coverage": 36},
+            "Stroke": {"cost": 8000, "rating": 9, "severity": 9, "insurance_coverage": 69},
+            "Cancer": {"cost": 10000, "rating": 9, "severity": 10, "insurance_coverage": 97},
+            "Hepatitis": {"cost": 1500, "rating": 8, "severity": 7, "insurance_coverage":70}
+        }
+    },
+    {
+        "hospital_name": "Artemis Hospitals",
+        "diseases": {
+            "Ultrasound": {"cost": 550, "rating": 7, "severity": 6, "insurance_coverage": 65},
+            "Cataract Surgery": {"cost": 1100, "rating": 6, "severity": 7, "insurance_coverage":67},
+            "Biopsy": {"cost": 3200, "rating": 8, "severity": 8, "insurance_coverage": 75},
+            "Angioplasty": {"cost": 600, "rating": 7, "severity": 5, "insurance_coverage": 57},
+            "Bypass": {"cost": 400, "rating": 8, "severity": 6, "insurance_coverage":65},
+            "Chronic Obstructive Pulmonary Disease": {"cost": 1200, "rating": 6, "severity": 6, "insurance_coverage": 60}
+        }
+    },
+    {
+        "hospital_name": "Narayana Health",
+        "diseases": {
+            "Ultrasound": {"cost": 450, "rating": 8, "severity": 6, "insurance_coverage": 62},
+            "Cataract Surgery": {"cost": 950, "rating": 7, "severity": 7, "insurance_coverage": 61},
+            "Biopsy": {"cost": 2800, "rating": 9, "severity": 8, "insurance_coverage": 82},
+            "Joint Replacement": {"cost": 2500, "rating": 8, "severity": 8, "insurance_coverage": 75},
+            "Arthritis": {"cost": 700, "rating": 7, "severity": 6, "insurance_coverage": 62},
+            "Osteoporosis": {"cost": 850, "rating": 6, "severity": 7, "insurance_coverage":69}
+        }
+    },
+    {
+        "hospital_name": "Medanta - The Medicity",
+        "diseases": {
+            "Ultrasound": {"cost": 600, "rating": 7, "severity": 5, "insurance_coverage": 54},
+            "Cataract Surgery": {"cost": 1050, "rating": 6, "severity": 6, "insurance_coverage": 66},
+            "Biopsy": {"cost": 3500, "rating": 9, "severity": 8, "insurance_coverage": 77},
+            "Migraine": {"cost": 300, "rating": 8, "severity": 4, "insurance_coverage":47},
+            "Obesity": {"cost": 1000, "rating": 7, "severity": 6, "insurance_coverage": 59},
+            "Rheumatoid Arthritis": {"cost": 900, "rating": 7, "severity": 6, "insurance_coverage": 58}
+        }
+    },
+    {
+        "hospital_name": "Tata Memorial Hospital",
+        "diseases": {
+            "Ultrasound": {"cost": 650, "rating": 8, "severity": 7, "insurance_coverage": 57},
+            "Cataract Surgery": {"cost": 1200, "rating": 7, "severity": 8, "insurance_coverage":62},
+            "Biopsy": {"cost": 3500, "rating": 9, "severity": 8, "insurance_coverage": 72},
+            "Heart Attack": {"cost": 5500, "rating": 8, "severity": 9, "insurance_coverage": 87},
+            "Diabetes": {"cost": 400, "rating": 9, "severity": 7, "insurance_coverage": 69}
+        }
+    },
+    {
+        "hospital_name": "PGIMER",
+        "diseases": {
+            "Ultrasound": {"cost": 500, "rating": 8, "severity": 6, "insurance_coverage": 68},
+            "Cataract Surgery": {"cost": 1000, "rating": 7, "severity": 7, "insurance_coverage": 73},
+            "Biopsy": {"cost": 3000, "rating": 9, "severity": 8, "insurance_coverage": 83},
+            "Joint Replacement": {"cost": 2700, "rating": 8, "severity": 8, "insurance_coverage": 75},
+            "Arthritis": {"cost": 750, "rating": 7, "severity": 6, "insurance_coverage": 62},
+            "Osteoporosis": {"cost": 900, "rating": 6, "severity": 7, "insurance_coverage": 66}
+        }
+    },
+    {
+        "hospital_name": "KIMS",
+        "diseases": {
+            "Ultrasound": {"cost": 550, "rating": 7, "severity": 6, "insurance_coverage": 62},
+            "Cataract Surgery": {"cost": 1000, "rating": 6, "severity": 7, "insurance_coverage":68},
+            "Biopsy": {"cost": 2800, "rating": 8, "severity": 8, "insurance_coverage": 77},
+            "Angioplasty": {"cost": 500, "rating": 7, "severity": 5, "insurance_coverage": 57},
+            "Bypass": {"cost": 350, "rating": 8, "severity": 6, "insurance_coverage": 65},
+            "Chronic Obstructive Pulmonary Disease": {"cost": 1100, "rating": 6, "severity": 6, "insurance_coverage": 60}
+        }
+    },
+    {
+        "hospital_name": "Yashoda",
+        "diseases": {
+            "Ultrasound": {"cost": 480, "rating": 8, "severity": 6, "insurance_coverage": 63},
+            "Cataract Surgery": {"cost": 900, "rating": 7, "severity": 7, "insurance_coverage": 70},
+            "Biopsy": {"cost": 2700, "rating": 9, "severity": 8, "insurance_coverage": 80},
+            "Joint Replacement": {"cost": 2400, "rating": 8, "severity": 8, "insurance_coverage":75},
+            "Arthritis": {"cost": 650, "rating": 7, "severity": 6, "insurance_coverage": 60},
+            "Osteoporosis": {"cost": 800, "rating": 6, "severity": 7, "insurance_coverage":65}
+        }
+    },
+    {
+        "hospital_name": "AIG",
+        "diseases": {
+            "Ultrasound": {"cost": 600, "rating": 7, "severity": 5, "insurance_coverage": 55},
+            "Cataract Surgery": {"cost": 1100, "rating": 6, "severity": 6, "insurance_coverage": 68},
+            "Biopsy": {"cost": 3200, "rating": 9, "severity": 8, "insurance_coverage": 77},
+            "Migraine": {"cost": 280, "rating": 8, "severity": 4, "insurance_coverage": 47},
+            "Obesity": {"cost": 950, "rating": 7, "severity": 6, "insurance_coverage": 60},
+            "Rheumatoid Arthritis": {"cost": 850, "rating": 7, "severity": 6, "insurance_coverage":63}
+        }
+    },
+    {
+        "hospital_name": "AIIMS",
+        "diseases": {
+            "Ultrasound": {"cost": 450, "rating": 9, "severity": 7, "insurance_coverage": 63},
+            "Cataract Surgery": {"cost": 900, "rating": 8, "severity": 8, "insurance_coverage": 60},
+            "Biopsy": {"cost": 2800, "rating": 9, "severity": 9, "insurance_coverage": 66},
+            "Heart Surgery": {"cost": 15000, "rating": 10, "severity": 10, "insurance_coverage": 69},
+            "Cancer Treatment": {"cost": 20000, "rating": 10, "severity": 10, "insurance_coverage": 64}
+        }
+    },
+    {
+        "hospital_name": "Apollo Hospitals",
+        "diseases": {
+            "Ultrasound": {"cost": 500, "rating": 8, "severity": 7, "insurance_coverage": 60},
+            "Cataract Surgery": {"cost": 950, "rating": 7, "severity": 8, "insurance_coverage": 65},
+            "Biopsy": {"cost": 3200, "rating": 8, "severity": 9, "insurance_coverage": 67},
+            "Stroke": {"cost": 10000, "rating": 9, "severity": 10, "insurance_coverage": 63},
+            "Kidney Transplant": {"cost": 25000, "rating": 10, "severity": 10, "insurance_coverage": 59}
+        }
+    },
+    {
+        "hospital_name": "Fortis Healthcare",
+        "diseases": {
+            "Ultrasound": {"cost": 480, "rating": 9, "severity": 7, "insurance_coverage": 60},
+            "Cataract Surgery": {"cost": 900, "rating": 8, "severity": 8, "insurance_coverage": 66},
+            "Biopsy": {"cost": 3100, "rating": 8, "severity": 9, "insurance_coverage": 64},
+            "Liver Transplant": {"cost": 20000, "rating": 10, "severity": 10, "insurance_coverage": 56},
+            "Lung Cancer Treatment": {"cost": 28000, "rating": 10, "severity": 10, "insurance_coverage":54}
+        }
+    }
+    
+]

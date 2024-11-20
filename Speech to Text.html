@@ -1,35 +1,24 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Real-time Speech-to-Text Converter</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <script>
-    function startRecording() {
-      var recognition = new webkitSpeechRecognition();
-      recognition.continuous = true;
-      recognition.interimResults = true;
+import speech_recognition as sr
+import pyttsx3
 
-      recognition.onresult = function(event) {
-        var result = event.results[event.results.length - 1];
-        var transcript = result[0].transcript;
-        document.getElementById('text').textContent = transcript;
-      };
+# Create a recognizer instance
+recognizer = sr.Recognizer()
 
-      recognition.onend = function() {
-        document.getElementById('record-button').textContent = 'Start Recording';
-      };
+# Use your microphone as the audio source
+with sr.Microphone() as source:
+    print("Please speak something...")
+    recognizer.adjust_for_ambient_noise(source)  # Adjust for ambient noise
+    audio = recognizer.listen(source)
 
-      recognition.start();
-    }
-  </script>
-</head>
-<body>
-  <h1>Real-time Speech-to-Text Converter</h1>
+    try:
+        text = recognizer.recognize_google(audio)
+        print("You said: " + text)
+    except sr.UnknownValueError:
+        print("Google Web Speech API could not understand the audio.")
+    except sr.RequestError as e:
+        print(f"Could not request results from Google Web Speech API; {e}")
 
-  <button onclick="startRecording()" id="record-button"><i class="fas fa-microphone"></i></button>
+text_speech = pyttsx3.init()
 
-  <h2>Recognized Text:</h2>
-  <div id="text"></div>
-</body>
-</html>
+text_speech.say(text)
+text_speech.runAndWait()
